@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --bg: #14120b;
+  --fg: #edeced;
+  --fg-muted: rgba(237, 236, 236, 0.55);
+  --fg-faint: rgba(237, 236, 236, 0.35);
+  --surface: #1b1913;
+  --surface-2: #201e18;
+  --surface-3: #26241e;
+  --line: rgba(237, 236, 236, 0.08);
+  --line-strong: rgba(237, 236, 236, 0.14);
+  --btn: #edeced;
+  --btn-fg: #14120b;
+  --up: #81c995;
+  --down: #f28b82;
+  --warn: #c08532;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.font-serif {
+  font-family: 'EB Garamond', Georgia, Cambria, serif;
+  font-weight: 400;
+}
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface-2);
+  padding: 0.2rem 0.55rem;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--fg-muted);
+}
+
+.btn-primary {
+  border: none;
+  border-radius: 999px;
+  background: var(--btn);
+  color: var(--btn-fg);
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--fg);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #2e2c25;
+  border-color: rgba(237, 236, 236, 0.22);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button {
+  cursor: pointer;
+}
